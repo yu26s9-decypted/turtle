@@ -66,11 +66,19 @@ public class MainApp
                 100
         );
 
+        Circle circle = new Circle(
+                turtle,
+                new Point(50, 150),
+                Color.RED,
+                4,
+                140
+        );
+
         // draw the rectangle
         rectangle.paint();
         triangle.paint();
         hexagon.paint();
-
+        circle.paint();
 
 //        turtle.goTo(100, 100);
 //        turtle.turnRight(90);
