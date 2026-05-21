@@ -22,12 +22,6 @@ public class MainApp
 
 
 
-//        int sideLength = 50;
-        drawRectangle(turtle);
-        turtle.setPenWidth(2);
-        turtle.setColor(Color.MAGENTA);
-
-
 
 
         turtle.goTo(300,300);
@@ -44,16 +38,38 @@ public class MainApp
 //            turtle.forward(sideLength);
 //            turtle.turnRight(60);
 //        }
-        turtle.setColor(Color.CYAN);
 
 
-        drawHexagon(turtle, 40);
 
-        turtle.goTo(150, 200);
-        drawTriangle(turtle, 20);
+        Rectangle rectangle = new Rectangle(
+                turtle,
+                new Point(-100, -50),
+                Color.BLUE,
+                3,
+                200,
+                100
+        );
 
-        turtle.goTo(300, 150);
-        drawCircle(turtle, 14);
+        Triangle triangle = new Triangle(
+                turtle,
+                new Point(0, 0),
+                Color.BLUE,
+                3,
+                150
+        );
+
+        Hexagon hexagon = new Hexagon(
+                turtle,
+                new Point(100, 50),
+                Color.MAGENTA,
+                4,
+                100
+        );
+
+        // draw the rectangle
+        rectangle.paint();
+        triangle.paint();
+        hexagon.paint();
 
 
 //        turtle.goTo(100, 100);
